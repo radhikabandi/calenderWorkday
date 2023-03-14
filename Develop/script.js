@@ -3,6 +3,7 @@ let currentHr = dayjs().hour();
 function updateBackGroundColor() {
   $('.time-block').each(function(){
       let scheduleHour = $(this).attr('id').split('-')[1]
+    console.log('scheduleHour',scheduleHour)
        if (currentHr > scheduleHour) {
          $(this).addClass('past')
        }
